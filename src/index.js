@@ -1,15 +1,13 @@
+/**
+ * Created by LoucilRubio on 7/19/17.
+ */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
 
-import App from './components/app';
-import reducers from './reducers';
+const API_KEY = 'AIzaSyBZ-vOKp3Uf_OO0F0fQHe7IquD1mQ-XpmA';
 
-const createStoreWithMiddleware = applyMiddleware()(createStore);
+const App = function(){
+    return <div>Hi!</div>;
+}
 
-ReactDOM.render(
-  <Provider store={createStoreWithMiddleware(reducers)}>
-    <App />
-  </Provider>
-  , document.querySelector('.container'));
+ReactDOM.render(<App/>, document.querySelector('.container'));
